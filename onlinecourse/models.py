@@ -127,4 +127,5 @@ class Choice(models.Model):
     # Many-to-Many relationship with choices or questions, for simplicity, you could just relate the choice model
 class Submission(models.Model):
     enrollement_id = models.ForeignKey(Enrollment, on_delete=models.CASCADE)
+    choice_id = models.ForeignKey(Choice , on_delete=models.CASCADE)
 
